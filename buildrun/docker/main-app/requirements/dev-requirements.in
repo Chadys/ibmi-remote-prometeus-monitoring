@@ -1,0 +1,3 @@
+-r base-requirements.txt
+ipython
+watchdog[watchmedo]

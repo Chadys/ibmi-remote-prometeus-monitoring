@@ -1,0 +1,10 @@
+{
+    debug
+	acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
+}
+
+local-app.domain.ovh {
+    tls internal
+
+    reverse_proxy app-metrics:8000
+}

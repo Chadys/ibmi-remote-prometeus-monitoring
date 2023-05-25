@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  caddy:
+    image: caddy:2
+    platform: linux/amd64
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8383:8383"
+    volumes:
+      - ../../caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ../../caddy/.caddy/config/:/config/
+      - ../../caddy/.caddy/data/:/data/
+    depends_on:
+      - app-metrics
+
+  compile-dep:
+    build:
+      context: ../../../..
+      dockerfile: buildrun/docker/main-app/Dockerfile
+      target: base-image
+    platform: linux/amd64  # because ibmi driver is not available for arm64
+    restart: on-failure
+    profiles:
+      - compile
+    command: >
+      sh -c
+      "pip-compile --upgrade --output-file requirements/base-requirements.txt requirements/base-requirements.in &&
+      pip-compile --upgrade --output-file requirements/dev-requirements.txt requirements/dev-requirements.in &&
+      pip-compile --upgrade --output-file requirements/prod-requirements.txt requirements/prod-requirements.in"
+    volumes:
+      - ../../main-app/requirements/:/code/requirements/
+
+  app-metrics:
+    build:
+      context: ../../../..
+      dockerfile: buildrun/docker/main-app/Dockerfile
+      target: dev-image
+    platform: linux/amd64  # because ibmi driver is not available for arm64
+    restart: on-failure
+    command: python metrics_server.py
+    volumes:
+      - ../../../../src:/code
+    env_file:
+      - ../../main-app/dev.env
+      - ../../main-app/secrets.env
+#    ports:
+#      - "8000:8000"
+    tty: true

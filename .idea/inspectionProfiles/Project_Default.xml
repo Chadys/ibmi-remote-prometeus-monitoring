@@ -1,0 +1,92 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="selectionattrurl" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="3.10" />
+            <item index="1" class="java.lang.String" itemvalue="3.11" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="Pillow" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="oscar_override.customer.mixins.RegisterUserMixin.request" />
+          <option value="oscar_override.partner.mixins.RegisterPartnerUserMixin.get_partner" />
+          <option value="oscar_override.partner.mixins.RegisterPartnerUserMixin.partner" />
+          <option value="oscar_override.partner.mixins.PartnerDetailMixin.kwargs" />
+          <option value="oscar_override.partner.mixins.PartnerDetailMixin.request" />
+          <option value="oscar_override.partner.mixins.PartnerPermMixin.request" />
+          <option value="oscar_override.partner.mixins.PartnerPermMixin.kwargs" />
+          <option value="oscar_override.checkout.session.CheckoutSessionMixin.request" />
+          <option value="oscar_invoices.abstract_models.AbstractLegalEntity.addresses" />
+          <option value="oscar_override.partner.strategy.DomTomTaxInclusive.request" />
+          <option value="oscar_override.partner.strategy.DomTomTaxInclusive.location_code" />
+          <option value="oscar_override.partner.strategy.DomTomTaxInclusive._country" />
+          <option value="oscar_override.partner.strategy.DomTomTaxInclusive.checkout_session" />
+          <option value="oscar_override.partner.strategy.DomTomTaxInclusive.get_shipping_address" />
+          <option value="oscar.apps.catalogue.models.ProductAttribute.get_solr_suffix" />
+          <option value="oscar_override.partner.strategy.DomTomTaxInclusive.select_stockrecord" />
+          <option value="oscar_override.catalogue.views.SearchWithLocationMixin.request" />
+          <option value="object.get" />
+          <option value="oscar_override.order.models.AbstractLine.attributes" />
+          <option value="common.models.User.addresses" />
+          <option value="common.models.User.partners" />
+          <option value="oscar_override.catalogue.mixins.PartnerPermissionMixin.*" />
+          <option value="object.*" />
+          <option value="common.serializers.OverrideRootPartialMixin.*" />
+          <option value="oscar_override.partner.mixins.PartnerPermissionMixin.request" />
+          <option value="oscar_override.partner.mixins.PartnerPermissionMixin.permission_denied" />
+          <option value="oscar_override.partner.mixins.PartnerPermissionMixin.get_permissions" />
+          <option value="oscar_override.search.views.SearchWithLocationMixin.request" />
+          <option value="common.models.auth.User.addresses" />
+          <option value="common.models.auth.User.wishlists" />
+          <option value="oscar.apps.wishlists.models.WishList.still_valid_lines" />
+          <option value="common.serializers.utils.OverrideRootPartialMixin.root" />
+          <option value="common.serializers.utils.OverrideRootPartialMixin.partial" />
+          <option value="common.serializers.utils.OverrideRootPartialMixin.default" />
+          <option value="common.serializers.utils.OverrideRootPartialMixin.validate" />
+          <option value="common.models.auth.User.shipping_addresses" />
+          <option value="oscar_override.catalogue.serializers.product.ProductPublicationMixin.instance" />
+          <option value="common.serializers.utils.OverrideRootPartialMixin.context" />
+          <option value="oscar_override.partner.serializers.utils.CSVModelSerializerMixin.fields" />
+          <option value="oscar_override.partner.serializers.utils.CSVModelSerializerMixin.validate_empty_values" />
+          <option value="oscar_override.partner.serializers.utils.CSVModelSerializerMixin.error_messages" />
+          <option value="rest_framework.fields.empty.get" />
+          <option value="integrations.dommarket_integration.formatters.mixins.DommarketDeletionFormatterMixin._output_file" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
